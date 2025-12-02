@@ -1,0 +1,77 @@
+
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+
+class Ui_Dialog(object):
+    def setupUi(self, Dialog):
+        Dialog.setObjectName("Dialog")
+        Dialog.resize(951, 618)
+        self.label = QtWidgets.QLabel(Dialog)
+        self.label.setGeometry(QtCore.QRect(100, 90, 55, 16))
+        self.label.setObjectName("label")
+        self.label_2 = QtWidgets.QLabel(Dialog)
+        self.label_2.setGeometry(QtCore.QRect(90, 230, 91, 31))
+        self.label_2.setObjectName("label_2")
+        self.label_3 = QtWidgets.QLabel(Dialog)
+        self.label_3.setGeometry(QtCore.QRect(560, 240, 71, 31))
+        self.label_3.setObjectName("label_3")
+        self.label_4 = QtWidgets.QLabel(Dialog)
+        self.label_4.setGeometry(QtCore.QRect(550, 70, 81, 31))
+        self.label_4.setObjectName("label_4")
+        self.txt_plain_text = QtWidgets.QTextEdit(Dialog)
+        self.txt_plain_text.setGeometry(QtCore.QRect(90, 120, 351, 87))
+        self.txt_plain_text.setObjectName("txt_plain_text")
+        self.txt_cipher_text = QtWidgets.QTextEdit(Dialog)
+        self.txt_cipher_text.setGeometry(QtCore.QRect(90, 280, 351, 87))
+        self.txt_cipher_text.setObjectName("txt_cipher_text")
+        self.txt_info = QtWidgets.QTextEdit(Dialog)
+        self.txt_info.setGeometry(QtCore.QRect(550, 110, 351, 87))
+        self.txt_info.setObjectName("txt_info")
+        self.txt_sign = QtWidgets.QTextEdit(Dialog)
+        self.txt_sign.setGeometry(QtCore.QRect(550, 280, 351, 87))
+        self.txt_sign.setObjectName("txt_sign")
+        self.label_5 = QtWidgets.QLabel(Dialog)
+        self.label_5.setGeometry(QtCore.QRect(440, 20, 71, 21))
+        self.label_5.setObjectName("label_5")
+        self.btn_gen_keys = QtWidgets.QPushButton(Dialog)
+        self.btn_gen_keys.setGeometry(QtCore.QRect(540, 20, 93, 28))
+        self.btn_gen_keys.setObjectName("btn_gen_keys")
+        self.btn_encrypt = QtWidgets.QPushButton(Dialog)
+        self.btn_encrypt.setGeometry(QtCore.QRect(150, 440, 93, 28))
+        self.btn_encrypt.setObjectName("btn_encrypt")
+        self.btn_decrypt = QtWidgets.QPushButton(Dialog)
+        self.btn_decrypt.setGeometry(QtCore.QRect(310, 440, 93, 28))
+        self.btn_decrypt.setObjectName("btn_decrypt")
+        self.btn_sign = QtWidgets.QPushButton(Dialog)
+        self.btn_sign.setGeometry(QtCore.QRect(540, 440, 93, 28))
+        self.btn_sign.setObjectName("btn_sign")
+        self.btn_verify = QtWidgets.QPushButton(Dialog)
+        self.btn_verify.setGeometry(QtCore.QRect(740, 440, 93, 28))
+        self.btn_verify.setObjectName("btn_verify")
+
+        self.retranslateUi(Dialog)
+        QtCore.QMetaObject.connectSlotsByName(Dialog)
+
+    def retranslateUi(self, Dialog):
+        _translate = QtCore.QCoreApplication.translate
+        Dialog.setWindowTitle(_translate("Dialog", "Dialog"))
+        self.label.setText(_translate("Dialog", "Plaintext"))
+        self.label_2.setText(_translate("Dialog", "cipher_text"))
+        self.label_3.setText(_translate("Dialog", "Signature"))
+        self.label_4.setText(_translate("Dialog", "Information"))
+        self.label_5.setText(_translate("Dialog", "RSA Cipher"))
+        self.btn_gen_keys.setText(_translate("Dialog", "GeneratesKey"))
+        self.btn_encrypt.setText(_translate("Dialog", "Encrypt"))
+        self.btn_decrypt.setText(_translate("Dialog", "Decrypt"))
+        self.btn_sign.setText(_translate("Dialog", "Sign"))
+        self.btn_verify.setText(_translate("Dialog", "Verify"))
+
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    Dialog = QtWidgets.QDialog()
+    ui = Ui_Dialog()
+    ui.setupUi(Dialog)
+    Dialog.show()
+    sys.exit(app.exec_())
